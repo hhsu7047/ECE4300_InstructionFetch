@@ -5,7 +5,7 @@ module fetch_tb();
     reg [31:0] ex_mem_npc;
     wire [31:0] if_id_instr, if_id_npc;
 
-    // Instantiate your Top Module
+   
     fetch uut (
         .clk(clk), .rst(rst), 
         .ex_mem_pc_src(ex_mem_pc_src), .ex_mem_npc(ex_mem_npc), 
@@ -22,7 +22,7 @@ module fetch_tb();
         // Hold reset for 2 cycles
         #20 rst = 0;
 
-        // Step 1: Let it fetch sequentially (PC: 0, 1, 2, 3)
+        // Step 1: fetch sequentially (PC: 0, 1, 2, 3)
         #40;
 
         // Step 2: Trigger a Branch/Jump
