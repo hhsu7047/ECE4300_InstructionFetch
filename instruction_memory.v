@@ -1,13 +1,13 @@
 `timescale 1ns / 1ps
 module instruction_memory (
-    input wire [31:0] addr,    // Changed from 'address'
-    output wire [31:0] data    // Changed from 'instruction'
+    input wire [31:0] addr,     
+    output wire [31:0] data    
 );
     // Physical storage limited for simulation; first 10 addresses populated
     reg [31:0] mem [0:1023]; 
 
     initial begin
-        mem[0] = 32'hDEADBEEF;
+        mem[0] = 32'hDEADBEEF; //debug state 
         mem[1] = 32'h11111111;
         mem[2] = 32'h22222222;
         mem[3] = 32'h33333333;
