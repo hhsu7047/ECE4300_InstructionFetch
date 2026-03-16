@@ -1,10 +1,10 @@
 module ifid_latch (
     input wire clk,
-    input wire rst,              // Added reset to match your fetch module
+    input wire rst,              
     input wire [31:0] instr_in,
-    input wire [31:0] pc_in,     // Renamed to match .pc_in(next_pc) in fetch.v
+    input wire [31:0] pc_in,     
     output reg [31:0] instr_out,
-    output reg [31:0] pc_out     // Renamed to match .pc_out(if_id_npc) in fetch.v
+    output reg [31:0] pc_out     
 );
 
     always @(posedge clk) begin
